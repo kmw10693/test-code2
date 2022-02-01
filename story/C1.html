@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/style.css">
+        <title>르탄이의 코딩도전기</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="blank"><p onclick="location.href='https://kmw10693.github.io/test-code1/'"><img src="../assets/logo.svg" alt="logo"></p></div>
+            <div class="wrap">
+                <div id="jihoon_normal" class="jihoonpic" style="display: block;"><img src="../assets/jihoon_normal.PNG" ></div>
+                <div id="jihoon_smile1" class="jihoonpic" style="display: none;"><img src="../assets/jihoon_smile1.PNG" ></div>
+                <div id="namebox_kimjihoon" class="namebox"><p>김스파</p></div>
+                <div id="namebox_none" class="namebox"><p>???</p></div>
+                <div id="namebox_you" class="namebox" style="display: block;"><p>김르탄 (21세)</p></div>
+                <div class="logbox">
+                    <p class="log">스파르타코딩클럽 : https://spartacodingclub.kr/</p><!--로그0-->
+                    <div id="nextbutton"><img src="../assets/next_button.svg" alt="button"></div>
+                </div>
+            </div>
+            <div class="blank"></div>
+        </div>
+
+        <script>
+        var i = 0;
+        var nextbutton = document.getElementById("nextbutton"); 
+        var log = document.getElementsByClassName("log"); 
+        var nameboxNone = document.getElementById("namebox_none");
+        var nameboxJihoon = document.getElementById("namebox_kimjihoon");
+        var nameboxYou = document.getElementById("namebox_you");
+        var jihoonNormal = document.getElementById("jihoon_normal");
+        var jihoonSmile1 = document.getElementById("jihoon_smile1");
+        var story2 = document.getElementById("story2");
+        jihoonNormal.style.display = "block";
+        nameboxYou.style.display="none"
+        nextbutton.style.display="none";
+        nameboxJihoon.style.display="none"
+
+        nextbutton.addEventListener("click", function(){
+        i++; //버튼 클릭할 때마다 변수 증가, 변수=로그 번호로 변수 번호에 맞는 로그 보여줌
+        console.log(i);
+        
+        var loghidden = log[i-1];
+        var logshow = log[i];
+        loghidden.style.display="none";
+        logshow.style.display="block";
+        
+        
+        if(i==1){ //마지막에 next button 숨기기
+        nextbutton.style.display="none";
+        nameboxJihoon.style.display="none"
+        };
+        
+        });
+        </script>
+    </body>
+</html>

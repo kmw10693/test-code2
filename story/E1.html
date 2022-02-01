@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/style.css">
+        <title>르탄이의 코딩도전기</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="blank"><p onclick="location.href='https://kmw10693.github.io/test-code2/'"><img src="../assets/logo.svg" alt="logo"></p></div>
+            <div class="wrap">
+                <div id="jihoon_normal" class="jihoonpic" style="display: block;"><img src="../assets/jihoon_normal.PNG" ></div>
+                <div id="jihoon_smile1" class="jihoonpic" style="display: none;"><img src="../assets/jihoon_smile1.PNG" ></div>
+                <div id="namebox_kimjihoon" class="namebox"><p>김스파</p></div>
+                <div id="namebox_none" class="namebox"><p>???</p></div>
+                <div id="namebox_you" class="namebox" style="display: block;"><p>김르탄 (21세)</p></div>
+                <div id="story1" class="choice"> <!--스토리 1번 선택지-->
+                    <div class="choice_wrap">
+                        <div class="answer" onclick="location.href='F1.html'"><p>우선 계획을 짠뒤 만날 시간을 정한다.</p></div>
+                        <div class="answer" onclick="location.href='F2.html'"><p>음 한 2시쯤 만나면 될 것 같다. </p></div>
+                    </div>
+                </div>
+                <div class="logbox">
+                    <p class="log">짝사랑하는 김스파</p><!--로그0-->
+                    <p class="log">“어 왜”</p><!--로그1-->
+                    <p class="log">“ㅠㅠㅠ”</p><!--로그2-->
+                    <p class="log">“야 너 울어 ?”</p><!--로그3-->
+                    <p class="log">“ㅠㅠㅠ 아니 ㅠㅠ”</p><!--로그4-->
+                    <p class="log">“뭐야 취했어? 왜 울어 무슨일 있어?”</p><!--로그5-->
+                    <p class="log">“ㅠㅠㅠㅠ 왜 나랑 안놀아줘?”</p><!--로그6-->
+                    <p class="log">“그거 때문에 우는거야...? ;; 나 주말에 00선배 결혼식 있어서 시간이 없어”</p><!--로그7-->
+                    <p class="log">“ㅠㅠㅠ 어쩌라구 ㅠㅠㅠ 나랑 놀아줘 ㅠㅠㅠ”</p><!--로그8-->
+                    <p class="log">“아니.. 나 그럼 금요일엔 시간 있어 금요일에 만날래?”</p><!--로그9-->
+                    <p class="log">“ㅠㅠㅠ 금요일 좋아 ㅠㅠㅠㅠ”</p><!--로그10-->
+                    <p class="log">“ㅋㅋㅋㅋ 알았어 그만 울고 얼른 자. 내일 연락할께”</p><!--로그11-->
+                    <p class="log">“ㅠㅠ 웅 ㅠㅠㅠㅠ..... zzz...”</p><!--로그12-->
+                    <p class="log">다음날</p><!--로그13-->
+                    <p class="log">‘으.... 어제 얼마나 마신거지 ... 숙취 너무 심해 ...’</p><!--로그14-->
+                    <p class="log">일어나서 핸드폰을 봤는데 김스파한테 카톡이 와있다</p><!--로그15-->
+                    <p class="log">“금요일에 언제 만날까?”</p><!--로그16-->
+                    <p class="log">....!!! 어제의 일이 주마등 처럼 스쳐지나간다.</p><!--로그17-->
+                    <p class="log">‘하.. 난 진짜 병신일까.... 너무 쪽팔리다... 그냥 자살이 답일듯 ^^’</p><!--로그18-->
+                    <p class="log">하지만 간신히 얻은 데이트기회를 날려버릴 순 없다.</p><!--로그19-->
+                    <p class="log"> <p class="log">하지만 간신히 얻은 데이트기회를 날려버릴 순 없다.</p><!--로그19-->
+                    <p class="log"> <p class="log">하지만 간신히 얻은 데이트기회를 날려버릴 순 없다.</p><!--로그20-->
+                    <div id="nextbutton"><img src="../assets/next_button.svg" alt="button"></div>
+                </div>
+            </div>
+            <div class="blank"></div>
+        </div>
+
+        <script>
+        var i = 0;
+        var nextbutton = document.getElementById("nextbutton"); 
+        var log = document.getElementsByClassName("log"); 
+        var nameboxNone = document.getElementById("namebox_none");
+        var nameboxJihoon = document.getElementById("namebox_kimjihoon");
+        var nameboxYou = document.getElementById("namebox_you");
+        var jihoonNormal = document.getElementById("jihoon_normal");
+        var jihoonSmile1 = document.getElementById("jihoon_smile1");
+        var story2 = document.getElementById("story2");
+        jihoonNormal.style.display = "block";
+        nameboxYou.style.display="none"
+
+        nextbutton.addEventListener("click", function(){
+        i++; //버튼 클릭할 때마다 변수 증가, 변수=로그 번호로 변수 번호에 맞는 로그 보여줌
+        console.log(i);
+        
+        var loghidden = log[i-1];
+        var logshow = log[i];
+        loghidden.style.display="none";
+        logshow.style.display="block";
+
+        
+        
+        if(i==1 || i==3 || i==5 || i==7 || i==9 || i==11){
+            nameboxJihoon.style.display="block"
+            nameboxYou.style.display="none"
+        }
+        else if(i==2 || i==4 || i==6 || i==8 || i==10 || i==12 || i==14 || i==18)
+        {
+            nameboxYou.style.display="block"
+            nameboxJihoon.style.display="none"
+        }
+        else{
+            nameboxYou.style.display="none"
+            nameboxJihoon.style.display="none"
+
+        }
+
+
+        if(i==20){ //마지막에 next button 숨기기
+        story1.style.display="block";
+        nextbutton.style.display="none";
+        nameboxJihoon.style.display="none"
+        };
+        
+        });
+        </script>
+    </body>
+</html>

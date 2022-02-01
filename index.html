@@ -1,0 +1,65 @@
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <title>르탄이의 코딩도전기</title>
+</head>
+
+<body>
+<div class="container">
+    <div class="blank"><p onclick="location.href='https://kmw10693.github.io/test-code1/'"><img src="assets/logo.svg" alt="logo"></p></div>
+    <div class="wrap">
+        <div id="jihoon_normal" class="jihoonpic"><img src="assets/jihoon_normal.PNG" ></div>
+        <div id="namebox_kimjihoon" class="namebox"><p>김스파</p></div>
+        <div id="namebox_none" class="namebox"><p>???</p></div>
+        <div id="namebox_you" class="namebox"><p>김르탄 (21세)</p></div>
+        <div id="story1" class="choice"> <!--스토리 1번 선택지-->
+            <div class="choice_wrap">
+                <div class="answer" onclick="location.href='story/A1.html'"><p>그래! 만나자고 하자!</p></div>
+                <div class="answer" onclick="location.href='story/A2.html'"><p>아니야.. 내가 좋아하는거 티나면 어캐 ㅠㅠ</p></div>
+            </div>
+        </div>
+        <div class="logbox">
+            <p class="log">나는 김르탄(21세) OO학교 소프트웨어학과에 재학중이다. </p><!--로그0-->
+            <p class="log">‘김스파를 짝사랑 한지 벌써 3년째 .. </p><!--로그1-->
+            <p class="log">스파는 눈치가 없는건지 아니면 나에게 마음이 없는건지 내 연애사업은 3년째 깜깜 무소식이다 ..^,ㅠ... </p><!--로그2-->
+            <p class="log">나 스파랑 데이트하고 싶다구 !! </p><!--로그3-->
+            <p class="log">스파한테 만나자고 해볼까 ? </p><!--로그4-->
+
+            <div id="nextbutton"><img src="assets/next_button.svg" alt="button"></div>
+        </div>
+    </div>
+    <div class="blank"></div>
+</div>
+
+<script>
+var i = 0;
+var nextButton = document.getElementById("nextbutton");
+var log = document.getElementsByClassName("log");
+var nameboxNone = document.getElementById("namebox_none");
+var nameboxJihoon = document.getElementById("namebox_kimjihoon");
+var nameboxYou = document.getElementById("namebox_you");
+var jihoonNormal = document.getElementById("jihoon_normal");
+var story1 = document.getElementById("story1");
+jihoonNormal.style.display = "block";
+nameboxYou.style.display="block"
+
+nextButton.addEventListener("click", function(){
+i++; //버튼 클릭할 때마다 변수 증가, 변수=로그 번호로 변수 번호에 맞는 로그 보여줌
+console.log(i);
+
+
+var loghidden = log[i-1];
+var logshow = log[i];
+loghidden.style.display="none";
+logshow.style.display="block";
+
+if(i==4){ //선택지에서 next button 숨기기
+    story1.style.display="block";
+    nextButton.style.display="none";
+    nameboxYou.style.display="none"
+};
+});
+
+</script>
+</body>
+</html>
