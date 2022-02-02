@@ -10,32 +10,28 @@
             <div class="wrap">
                 <div id="jihoon_normal" class="jihoonpic" style="display: block;"><img src="../assets/jihoon_normal.PNG" ></div>
                 <div id="jihoon_smile1" class="jihoonpic" style="display: none;"><img src="../assets/jihoon_smile1.PNG" ></div>
-                <div id="namebox_kimjihoon" class="namebox"><p>김스파</p></div>
+                <div id="namebox_kimjihoon" class="namebox"><p>삥뽕</p></div>
                 <div id="namebox_none" class="namebox"><p>???</p></div>
                 <div id="namebox_you" class="namebox" style="display: block;"><p>김르탄 (21세)</p></div>
+                <div id="story1" class="choice"> <!--스토리 1번 선택지-->
+                    <div class="choice_wrap">
+                        <div class="answer" onclick="location.href='H5.html'"><p>마음을 정리한다</p></div>
+                        <div class="answer" onclick="location.href='H6.html'"><p>아무래도 포기하지 못한다</p></div>
+                    </div>
+                </div>
                 <div class="logbox">
                     <p class="log">댄디/러블리</p><!--로그0-->
-                    <p class="log">스파를 만나서 카페도 가고 밥도 먹고 즐거운 시간을 보냈다.</p><!--로그1-->
-                    <p class="log">‘사실 스파도 나를 좋아하는 걸까?’</p><!--로그2-->
-                    <p class="log">“스파야 너는 컴공 졸업하면 뭐할꺼야?”</p><!--로그3-->
-                    <p class="log">“음.. 나는 코딩쪽으로 갈까 생각하고 있어”</p><!--로그4-->
-                    <p class="log">“어 진짜? 무슨 코딩?”</p><!--로그5-->
-                    <p class="log">“아직 구체적으로는 생각 안해봤는데, 내 친구들은 앱개발 많이 하더라고”</p><!--로그6-->
-                    <p class="log">“어 나 이번 방학때 앱개발 수업 들으려고 하는데 같이 스터디할래?”</p><!--로그7-->
-                    <p class="log">“아 그럴까? 너 수업 어디서 듣는데?”</p><!--로그8-->
-                    <p class="log">“친구가 ‘스파르타코딩클럽’을 엄청 추천해줘서 그거 하려구!”</p><!--로그9-->
-                    <p class="log">“나도 들어본 것 같아. 같이 공부하자!”</p><!--로그10-->
-                    <p class="log">스파와 함께 스터디를 하면서 우리는 더 가까워졌다.</p><!--로그11-->
-                    <p class="log">3개월 뒤. 카페</p><!--로그12-->
-                    <p class="log">“그래!”</p><!--로그13-->
-                    <p class="log">집가는길 ...</p><!--로그14-->
-                    <p class="log">“르탄아”</p><!--로그15-->
-                    <p class="log">“응?”</p><!--로그16-->
-                    <p class="log">“나 사실 너랑 스터디를 하면서 너가 앱개발하는 모습에 반해버렸어. 나랑.. 만나줄래 ..?”</p><!--로그17-->
-                    <p class="log">..!! 스파가 나한테 고백을 하다니 믿을 수 없다.</p><!--로그18-->
-                    <p class="log">이게 바로 스파르타코딩클럽의 앱개발 종합반의 효과인걸까...?</p><!--로그19-->
-                    <p class="log">“나도.. 널 좋아해 !!!”</p><!--로그20-->
-                    <p class="log">‘앱개발은 이걸로 끝! iOS와 안드로이드 앱을 한번에 만들 수 있는 코딩 입문 수업’ 앱개발종합반 https://spartacodingclub.kr/online/data</p><!--로그21-->
+                    <p class="log">옆에 옷을 주섬주섬 입고 나갔다.</p><!--로그1-->
+                    <p class="log">“삥뽕아 안녕”</p><!--로그2-->
+                    <p class="log">“하이."</p><!--로그3-->
+                    <p class="log">삥뽕이와 카페에 갔다.</p><!--로그4-->
+                    <p class="log">“삥뽕아 ... 나 이러다가 모쏠로 죽는거 아닐까..?”</p><!--로그5-->
+                    <p class="log">“왜 또. 무슨일 있어?”</p><!--로그6-->
+                    <p class="log">“아니.. 내가 스파한테 만나자고 하려고 마음을 먹었거든? 그래서 막 5만번 고민해서 간신히 카톡을 보냈는데 ... (&*^$&(*)”</p><!--로그7-->
+                    <p class="log">~ 30분 후 ~</p><!--로그8-->
+                    <p class="log">“...*^%*) 막 그랬어..”</p><!--로그9-->
+                    <p class="log">“아휴 힘들었겠네... 근데 르탄아 아무래도 스파는 너한테 별 마음이 없는 거 같아. 그만 포기하는게 어때?”</p><!--로그10-->
+                    <p class="log">어쩌면 좋을까?</p><!--로그11-->
 
                     <div id="nextbutton"><img src="../assets/next_button.svg" alt="button"></div>
                 </div>
@@ -67,11 +63,11 @@
 
         
         
-        if(i==4 || i==6 || i==8 || i==10  || i==15 || i==17){    //상대방
+        if(i==3 || i==6 || i==10){
             nameboxJihoon.style.display="block"
             nameboxYou.style.display="none"
         }
-        else if(i==3 || i==5 || i==7 || i==9|| i==11 || i==13 || i==16 | i==20)   //나
+        else if(i==2 || i==5 || i==7 || i==9)   
         {
             nameboxYou.style.display="block"
             nameboxJihoon.style.display="none"
@@ -83,7 +79,8 @@
         }
 
 
-        if(i==21){ //마지막에 next button 숨기기
+        if(i==11){ //마지막에 next button 숨기기
+        story1.style.display="block";
         nextbutton.style.display="none";
         nameboxJihoon.style.display="none"
         };
