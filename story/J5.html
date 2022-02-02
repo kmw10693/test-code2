@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/style.css">
+        <title>르탄이의 코딩도전기</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="blank"><p onclick="location.href='https://kmw10693.github.io/test-code2/'"><img src="../assets/logo.svg" alt="logo"></p></div>
+            <div class="wrap">
+                <div id="jihoon_normal" class="jihoonpic" style="display: block;"><img src="../assets/jihoon_normal.PNG" ></div>
+                <div id="jihoon_smile1" class="jihoonpic" style="display: none;"><img src="../assets/jihoon_smile1.PNG" ></div>
+                <div id="namebox_kimjihoon" class="namebox"><p>삥뽕</p></div>
+                <div id="namebox_none" class="namebox"><p>???</p></div>
+                <div id="namebox_you" class="namebox" style="display: block;"><p>김르탄 (21세)</p></div>
+                <div id="story1" class="choice"> <!--스토리 1번 선택지-->
+                    <div class="choice_wrap">
+                        <div class="answer" onclick="location.href='J1.html'"><p>메일함</p></div>
+                    </div>
+                </div>
+                <div class="logbox">
+                    <p class="log">삥뽕이와 함께라면 너무 행복할것 같다. 이게 바로 스파르타코딩클럽의 데이터분석 종합반 수업 스터디 덕분이다.</p><!--로그0-->
+                    <p class="log">“나도.. 널 좋아해 !!!”</p><!--로그1-->
+                    <p class="log">스파르타코딩클럽 ‘데이터분석 종합반’ https://spartacodingclub.kr/online/data</p><!--로그2-->
+                    <div id="nextbutton"><img src="../assets/next_button.svg" alt="button"></div>
+                </div>
+            </div>
+            <div class="blank"></div>
+        </div>
+
+        <script>
+        var i = 0;
+        var nextbutton = document.getElementById("nextbutton"); 
+        var log = document.getElementsByClassName("log"); 
+        var nameboxNone = document.getElementById("namebox_none");
+        var nameboxJihoon = document.getElementById("namebox_kimjihoon");
+        var nameboxYou = document.getElementById("namebox_you");
+        var jihoonNormal = document.getElementById("jihoon_normal");
+        var jihoonSmile1 = document.getElementById("jihoon_smile1");
+        var story2 = document.getElementById("story2");
+        jihoonNormal.style.display = "block";
+        nameboxYou.style.display="none"
+
+        nextbutton.addEventListener("click", function(){
+        i++; //버튼 클릭할 때마다 변수 증가, 변수=로그 번호로 변수 번호에 맞는 로그 보여줌
+        console.log(i);
+        
+        var loghidden = log[i-1];
+        var logshow = log[i];
+        loghidden.style.display="none";
+        logshow.style.display="block";
+
+        
+        
+        if(i==1)   // 나 대화상자
+        {
+            nameboxYou.style.display="block"
+            nameboxJihoon.style.display="none"
+        }
+        else{
+            nameboxYou.style.display="none"
+            nameboxJihoon.style.display="none"
+
+        }
+
+
+        if(i==2){ //마지막에 next button 숨기기
+        story1.style.display="block";
+        nextbutton.style.display="none";
+        nameboxJihoon.style.display="none"
+        };
+        
+        });
+        </script>
+    </body>
+</html>

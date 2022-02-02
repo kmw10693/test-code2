@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/style.css">
+        <title>르탄이의 코딩도전기</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="blank"><p onclick="location.href='https://kmw10693.github.io/test-code2/'"><img src="../assets/logo.svg" alt="logo"></p></div>
+            <div class="wrap">
+                <div id="jihoon_normal" class="jihoonpic" style="display: block;"><img src="../assets/jihoon_normal.PNG" ></div>
+                <div id="jihoon_smile1" class="jihoonpic" style="display: none;"><img src="../assets/jihoon_smile1.PNG" ></div>
+                <div id="namebox_kimjihoon" class="namebox"><p>삥뽕</p></div>
+                <div id="namebox_none" class="namebox"><p>???</p></div>
+                <div id="namebox_you" class="namebox" style="display: block;"><p>김르탄 (21세)</p></div>
+                <div id="story1" class="choice"> <!--스토리 1번 선택지-->
+                    <div class="choice_wrap">
+                        <div class="answer" onclick="location.href='E3.html'"><p>이범규</p></div>
+                        <div class="answer" onclick="location.href='E4.html'"><p>김준태</p></div>
+                        <div class="answer" onclick="location.href='E5.html'"><p>김건희</p></div>
+                        <div class="answer" onclick="location.href='E6.html'"><p>이동현</p></div>
+                    </div>
+                </div>
+                <div class="logbox">
+                    <p class="log">친구한테 소개팅이나 시켜달라고 해야겠다.</p><!--로그0-->
+                    <p class="log">“친구야.. 나 소개시켜줄 사람 없어 ㅠㅠ? ”</p><!--로그1-->
+                    <p class="log">“뭐야 김르탄 드디어 짝사랑 끝이야? 당장 소개시켜줄께! 누가 좋아?”</p><!--로그2-->
+                    <p class="log">친구가 사진을 여러장 보여준다. 누구를 만날까 ?</p><!--로그3-->
+                    <div id="nextbutton"><img src="../assets/next_button.svg" alt="button"></div>
+                </div>
+            </div>
+            <div class="blank"></div>
+        </div>
+
+        <script>
+        var i = 0;
+        var nextbutton = document.getElementById("nextbutton"); 
+        var log = document.getElementsByClassName("log"); 
+        var nameboxNone = document.getElementById("namebox_none");
+        var nameboxJihoon = document.getElementById("namebox_kimjihoon");
+        var nameboxYou = document.getElementById("namebox_you");
+        var jihoonNormal = document.getElementById("jihoon_normal");
+        var jihoonSmile1 = document.getElementById("jihoon_smile1");
+        var story2 = document.getElementById("story2");
+        jihoonNormal.style.display = "block";
+        nameboxYou.style.display="none"
+
+        nextbutton.addEventListener("click", function(){
+        i++; //버튼 클릭할 때마다 변수 증가, 변수=로그 번호로 변수 번호에 맞는 로그 보여줌
+        console.log(i);
+        
+        var loghidden = log[i-1];
+        var logshow = log[i];
+        loghidden.style.display="none";
+        logshow.style.display="block";
+        
+        if(i==2){   // 상대방 대화상자
+            nameboxJihoon.style.display="block"
+            nameboxYou.style.display="none"
+        }
+        else if(i==1)   // 나 대화상자
+        {
+            nameboxYou.style.display="block"
+            nameboxJihoon.style.display="none"
+        }
+        else{
+            nameboxYou.style.display="none"
+            nameboxJihoon.style.display="none"
+
+        }
+
+        if(i==3){ //마지막에 next button 숨기기
+        story1.style.display="block";
+        nextbutton.style.display="none";
+        nameboxJihoon.style.display="none"
+        };
+        
+        });
+        </script>
+    </body>
+</html>

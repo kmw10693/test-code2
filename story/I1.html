@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/style.css">
+        <title>르탄이의 코딩도전기</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="blank"><p onclick="location.href='https://kmw10693.github.io/test-code2/'"><img src="../assets/logo.svg" alt="logo"></p></div>
+            <div class="wrap">
+                <div id="jihoon_normal" class="jihoonpic" style="display: block;"><img src="../assets/jihoon_normal.PNG" ></div>
+                <div id="jihoon_smile1" class="jihoonpic" style="display: none;"><img src="../assets/jihoon_smile1.PNG" ></div>
+                <div id="namebox_kimjihoon" class="namebox"><p>삥뽕</p></div>
+                <div id="namebox_none" class="namebox"><p>???</p></div>
+                <div id="namebox_you" class="namebox" style="display: block;"><p>김르탄 (21세)</p></div>
+                <div class="logbox">
+                    <p class="log">함께 스터디를 한다</p><!--로그0-->
+                    <p class="log">“나도 스터디 같이 해도 될까?”</p><!--로그1-->
+                    <p class="log">“그럼 민주랑 재성이도 좋아할꺼야”</p><!--로그2-->
+                    <p class="log">“삥뽕아 정말 고마워”</p><!--로그3-->
+                    <p class="log">10년뒤...</p><!--로그4-->
+                    <p class="log">‘데이터분석 스타트업 ‘팀아테네’ 전년대비 500% 성장... 연매출 100억원 달성. CEO 김르탄 인터뷰’</p><!--로그5-->
+                    <p class="log">김르탄은 스터디를 통해 만난 친구들과 함께 팀아테네를 창업하였고, 성공적인 CEO가 되었다.</p><!--로그6-->
+                    <p class="log">‘현업에서 쓰이는 데이터 분석 & 인사이트 추출 방법을 핵심만 빠르게 숙달하는 데이터분석 종합반’  https://spartacodingclub.kr/online/data</p><!--로그8-->
+                    <div id="nextbutton"><img src="../assets/next_button.svg" alt="button"></div>
+                </div>
+            </div>
+            <div class="blank"></div>
+        </div>
+
+        <script>
+        var i = 0;
+        var nextbutton = document.getElementById("nextbutton"); 
+        var log = document.getElementsByClassName("log"); 
+        var nameboxNone = document.getElementById("namebox_none");
+        var nameboxJihoon = document.getElementById("namebox_kimjihoon");
+        var nameboxYou = document.getElementById("namebox_you");
+        var jihoonNormal = document.getElementById("jihoon_normal");
+        var jihoonSmile1 = document.getElementById("jihoon_smile1");
+        var story2 = document.getElementById("story2");
+        jihoonNormal.style.display = "block";
+        nameboxYou.style.display="none"
+
+        nextbutton.addEventListener("click", function(){
+        i++; //버튼 클릭할 때마다 변수 증가, 변수=로그 번호로 변수 번호에 맞는 로그 보여줌
+        console.log(i);
+        
+        var loghidden = log[i-1];
+        var logshow = log[i];
+        loghidden.style.display="none";
+        logshow.style.display="block";
+
+        
+        
+        if(i==2){   // 상대방 대화상자
+            nameboxJihoon.style.display="block"
+            nameboxYou.style.display="none"
+        }
+        else if(i==1 || i==3)   // 나 대화상자
+        {
+            nameboxYou.style.display="block"
+            nameboxJihoon.style.display="none"
+        }
+        else{
+            nameboxYou.style.display="none"
+            nameboxJihoon.style.display="none"
+
+        }
+
+
+        if(i==7){ //마지막에 next button 숨기기
+        nextbutton.style.display="none";
+        nameboxJihoon.style.display="none"
+        };
+        
+        });
+        </script>
+    </body>
+</html>
