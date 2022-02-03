@@ -15,13 +15,17 @@
                 <div id="namebox_you" class="namebox" style="display: block;"><p>김르탄 (21세)</p></div>
                 <div id="story1" class="choice"> <!--스토리 1번 선택지-->
                     <div class="choice_wrap">
-                        <div class="answer" onclick="location.href='D1(F).html'"><p>김스파 짝사랑 유지</p></div>
-                        <div class="answer" onclick="location.href='D2(F).html'"><p>김스파 짝사랑 끝 </p></div>
+                        <div class="answer" onclick="location.href='H1(TJ).html'"><p>?? 너 남친/여친 있어 ...?</p></div>
+                        <div class="answer" onclick="location.href='H2(TJ).html'"><p>아.... 응 괜찮네...</p></div>
                     </div>
                 </div>
                 <div class="logbox">
-                    <p class="log">‘뿌엥 나한테 어떻게 그런말을... ㅠㅠ’</p><!--로그0-->
-                    <p class="log">‘뿌엥 나한테 어떻게 그런말을... ㅠㅠ’</p><!--로그1-->
+                    <p class="log">캐쥬얼</p><!--로그0-->
+                    <p class="log">스파를 만나서 카페에 가서 즐겁게 이야기를 나누었다.</p><!--로그1-->
+                    <p class="log">'스파도 나에게 마음이 있는걸까 ...?'</p><!--로그2-->
+                    <p class="log">“르탄아 이거 초콜릿 어때? 귀엽지않아?”</p><!--로그3-->
+                    <p class="log">“응 귀엽다 맛있을 것 같아”</p><!--로그4-->
+                    <p class="log">“곧 발렌타인데이라서 남친/여친 주려고. 어때 괜찮은 것 같아?”</p><!--로그5-->
                     <div id="nextbutton"><img src="../assets/next_button.svg" alt="button"></div>
                 </div>
             </div>
@@ -49,9 +53,26 @@
         var logshow = log[i];
         loghidden.style.display="none";
         logshow.style.display="block";
-        
 
-        if(i==1){ //마지막에 next button 숨기기
+        
+        
+        if(i==3 || i==5){
+            nameboxJihoon.style.display="block"
+            nameboxYou.style.display="none"
+        }
+        else if(i==4)
+        {
+            nameboxYou.style.display="block"
+            nameboxJihoon.style.display="none"
+        }
+        else{
+            nameboxYou.style.display="none"
+            nameboxJihoon.style.display="none"
+
+        }
+
+
+        if(i==5){ //마지막에 next button 숨기기
         story1.style.display="block";
         nextbutton.style.display="none";
         nameboxJihoon.style.display="none"

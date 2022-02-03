@@ -10,18 +10,25 @@
             <div class="wrap">
                 <div id="jihoon_normal" class="jihoonpic" style="display: block;"><img src="../assets/jihoon_normal.PNG" ></div>
                 <div id="jihoon_smile1" class="jihoonpic" style="display: none;"><img src="../assets/jihoon_smile1.PNG" ></div>
-                <div id="namebox_kimjihoon" class="namebox"><p>김스파</p></div>
+                <div id="namebox_kimjihoon" class="namebox"><p>삥뽕</p></div>
                 <div id="namebox_none" class="namebox"><p>???</p></div>
                 <div id="namebox_you" class="namebox" style="display: block;"><p>김르탄 (21세)</p></div>
                 <div id="story1" class="choice"> <!--스토리 1번 선택지-->
                     <div class="choice_wrap">
-                        <div class="answer" onclick="location.href='D1(F).html'"><p>김스파 짝사랑 유지</p></div>
-                        <div class="answer" onclick="location.href='D2(F).html'"><p>김스파 짝사랑 끝 </p></div>
+                        <div class="answer" onclick="location.href='I3(FJ).html'"><p>함께 스터디를 한다.</p></div>
+                        <div class="answer" onclick="location.href='I2.html'"><p>그냥 아무것도 안한다.</p></div>
                     </div>
                 </div>
                 <div class="logbox">
-                    <p class="log">‘뿌엥 나한테 어떻게 그런말을... ㅠㅠ’</p><!--로그0-->
-                    <p class="log">‘뿌엥 나한테 어떻게 그런말을... ㅠㅠ’</p><!--로그1-->
+                    <p class="log">아무래도 그냥 포기할 순 없다.</p><!--로그0-->
+                    <p class="log">“나도 포기하고 싶은데 그게 잘 안돼..”</p><!--로그1-->
+                    <p class="log">“그럼 스파 생각이 안날만큼 바쁘게 살아보는건 어때?”</p><!--로그2-->
+                    <p class="log">“그래볼까..? 뭘하면 좋지..”</p><!--로그3-->
+                    <p class="log">“흠.. 어 혹시 이번 방학때 나랑 스터디라도 할래?”</p><!--로그4-->
+                    <p class="log">“스터디?”</p><!--로그5-->
+                    <p class="log">“응 우리 동기 민주랑 재성이랑 스파르타코딩클럽 ‘웹개발 종합반’ 수업 같이 듣고 같이 공부하기로 했어”</p><!--로그6-->
+                    <p class="log">스파르타코딩클럽 수업 엄청 괜찮다던데...</p><!--로그7-->
+                    <p class="log">스파르타코딩클럽 수업 엄청 괜찮다던데...</p><!--로그8-->
                     <div id="nextbutton"><img src="../assets/next_button.svg" alt="button"></div>
                 </div>
             </div>
@@ -49,10 +56,26 @@
         var logshow = log[i];
         loghidden.style.display="none";
         logshow.style.display="block";
-        
 
-        if(i==1){ //마지막에 next button 숨기기
-        story1.style.display="block";
+        
+        
+        if(i==2 || i==4 || i==6 || i==7){    // 상대방
+            nameboxJihoon.style.display="block"
+            nameboxYou.style.display="none"
+        }
+        else if(i==1 || i==3 || i==5)   //나
+        {
+            nameboxYou.style.display="block"
+            nameboxJihoon.style.display="none"
+        }
+        else{
+            nameboxYou.style.display="none"
+            nameboxJihoon.style.display="none"
+
+        }
+
+
+        if(i==21){ //마지막에 next button 숨기기
         nextbutton.style.display="none";
         nameboxJihoon.style.display="none"
         };

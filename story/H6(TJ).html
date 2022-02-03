@@ -15,24 +15,26 @@
                 <div id="namebox_you" class="namebox" style="display: block;"><p>김르탄 (21세)</p></div>
                 <div id="story1" class="choice"> <!--스토리 1번 선택지-->
                     <div class="choice_wrap">
-                        <div class="answer" onclick="location.href='J1.html'"><p>국비지원으로 개발자 교육을 받는다</p></div>
-                        <div class="answer" onclick="location.href='J2.html'"><p>부트캠프에 참가해 개발자 교육을 받는다.</p></div>
-                        <div class="answer" onclick="location.href='J3.html'"><p>우선 그냥 아무곳이나 지원해본다.</p></div>
-                        <div class="answer" onclick="location.href='J4.html'"><p>모든 것을 스파의 탓으로 돌리고 칩거한다.</p></div>
+                        <div class="answer" onclick="location.href='I6(TJ).html'"><p>함께 스터디를 한다.</p></div>
+                        <div class="answer" onclick="location.href='I5.html'"><p>그냥 아무것도 안한다.</p></div>
                     </div>
                 </div>
                 <div class="logbox">
-                    <p class="log">그냥 아무것도 안한다</p><!--로그0-->
-                    <p class="log">그래도 역시 방학동안 공부는 하고 싶지 않다</p><!--로그1-->
-                    <p class="log">“아니야 그냥 넷플릭스나 볼래..”</p><!--로그2-->
-                    <p class="log">2년뒤..</p><!--로그3-->
-                    <p class="log">넷플릭스에 중독된 르탄이는 넷플릭스만 보며 2년을 보내고 졸업을 하게 되었다. </p><!--로그4-->
-                    <p class="log">집에서 넷플릭스만 보다보니 자연스럽게 삥뽕이와도 멀어지게 되었다. </p><!--로그5-->
-                    <p class="log">학점 : 3.5/4.5, 대외활동 없음</p><!--로그6-->
-                    <p class="log">수상경력 없음, 동아리활동 없음 </p><!--로그7-->
-                    <p class="log">봉사시간 0, 포트폴리오 없음</p><!--로그8-->
-                    <p class="log">정신차려보니 포폴도 없고 스펙도 엉망이다.</p><!--로그9-->
-                    <p class="log">‘하.. 나 개발자가 되고싶었는데 ... 취업 할 수 있을까?’</p><!--로그10-->
+                    <p class="log">역시 삥뽕이는 편한 친구다.</p><!--로그0-->
+                    <p class="log">집으로 돌아와서 씻고 자려는데 삥뽕이한테 문자가 왔다</p><!--로그1-->
+                    <p class="log">“야 잘 들어갔어?”</p><!--로그2-->
+                    <p class="log">“응 너는?”</p><!--로그3-->
+                    <p class="log">“나도 집이지. 야 근데 나 집오는데 ㅋㅋㅋ ...^&*(&#*&(...”</p><!--로그4-->
+                    <p class="log">삥뽕이와 카톡을 하다보니 벌써 2시간이 지나있다.</p><!--로그5-->
+                    <p class="log">“ㅋㅋㅋ 야 삥뽕 근데 벌써 새벽2시야”</p><!--로그6-->
+                    <p class="log">“헐 그렇네 나 낼 일찍일어나야되는데 망했다”</p><!--로그7-->
+                    <p class="log">“낼 뭐하는데?”</p><!--로그8-->
+                    <p class="log">“아 나 이번 방학때 민주랑 재성이랑 스터디하기로 했거든”</p><!--로그9-->
+                    <p class="log">“어 진짜?”</p><!--로그10-->
+                    <p class="log">“응응 스파르타코딩클럽 ‘데이터분석 종합반’ 수업 같이 듣고 같이 공부하기로 했어”</p><!--로그11-->
+                    <p class="log">“우와.. 나도 그런거 해야하나..”</p><!--로그12-->
+                    <p class="log">“야 너도 들어올래? 우리 한자리 비어!”</p><!--로그13-->
+                    <p class="log">스파르타코딩클럽 수업 엄청 괜찮다던데...</p><!--로그14-->
                     <div id="nextbutton"><img src="../assets/next_button.svg" alt="button"></div>
                 </div>
             </div>
@@ -63,7 +65,11 @@
 
         
         
-        if(i==2)   // 나 대화상자
+        if(i==2 || i==4 || i==7 || i==9 || i==11 || i==13 || i==14){    // 상대방
+            nameboxJihoon.style.display="block"
+            nameboxYou.style.display="none"
+        }
+        else if(i==3 || i==6 || i==8 || i==10 || i==12)   //나
         {
             nameboxYou.style.display="block"
             nameboxJihoon.style.display="none"
@@ -75,7 +81,7 @@
         }
 
 
-        if(i==10){ //마지막에 next button 숨기기
+        if(i==14){ //마지막에 next button 숨기기
         story1.style.display="block";
         nextbutton.style.display="none";
         nameboxJihoon.style.display="none"

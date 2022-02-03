@@ -10,18 +10,29 @@
             <div class="wrap">
                 <div id="jihoon_normal" class="jihoonpic" style="display: block;"><img src="../assets/jihoon_normal.PNG" ></div>
                 <div id="jihoon_smile1" class="jihoonpic" style="display: none;"><img src="../assets/jihoon_smile1.PNG" ></div>
-                <div id="namebox_kimjihoon" class="namebox"><p>김스파</p></div>
+                <div id="namebox_kimjihoon" class="namebox"><p>삥뽕</p></div>
                 <div id="namebox_none" class="namebox"><p>???</p></div>
                 <div id="namebox_you" class="namebox" style="display: block;"><p>김르탄 (21세)</p></div>
                 <div id="story1" class="choice"> <!--스토리 1번 선택지-->
                     <div class="choice_wrap">
-                        <div class="answer" onclick="location.href='D1(F).html'"><p>김스파 짝사랑 유지</p></div>
-                        <div class="answer" onclick="location.href='D2(F).html'"><p>김스파 짝사랑 끝 </p></div>
+                        <div class="answer" onclick="location.href='J5(TP).html'"><p>고백을 받아준다.</p></div>
+                        <div class="answer" onclick="location.href='J6(TP).html'"><p>고백을 받아주지 않는다.</p></div>
                     </div>
                 </div>
                 <div class="logbox">
-                    <p class="log">‘뿌엥 나한테 어떻게 그런말을... ㅠㅠ’</p><!--로그0-->
-                    <p class="log">‘뿌엥 나한테 어떻게 그런말을... ㅠㅠ’</p><!--로그1-->
+                    <p class="log">“헐 나 할래!”</p><!--로그0-->
+                    <p class="log">한달 뒤. </p><!--로그1-->
+                    <p class="log">삥뽕이와 함꼐 한달동안 스터디를 하며 많이 가까워졌다.</p><!--로그2-->
+                    <p class="log">이젠 밤마다 전화하는 게 일상이 되었다.</p><!--로그3-->
+                    <p class="log">‘이거 .. 썸인가..?’</p><!--로그4-->
+                    <p class="log">스터디가 끝나고 삥뽕이와 집가는 길..</p><!--로그5-->
+                    <p class="log">“르탄아”</p><!--로그6-->
+                    <p class="log">‘“응?”</p><!--로그7-->
+                    <p class="log">“혹시 아직도 스파 좋아해?”</p><!--로그8-->
+                    <p class="log">그러고 보니 스파를 생각하지 않은지 오래된 것 같다.</p><!--로그9-->
+                    <p class="log">“어.. 나 이제 스파 안좋아하는 것 같아..!”</p><!--로그10-->
+                    <p class="log">“있잖아 스파야.. 나 사실 너를 오랫동안 좋아하고 있었어. 나랑 만나줄래 ..?”</p><!--로그11-->
+                    <p class="log">..!! </p><!--로그12-->
                     <div id="nextbutton"><img src="../assets/next_button.svg" alt="button"></div>
                 </div>
             </div>
@@ -49,9 +60,26 @@
         var logshow = log[i];
         loghidden.style.display="none";
         logshow.style.display="block";
-        
 
-        if(i==1){ //마지막에 next button 숨기기
+        
+        
+        if(i==6 || i==8 || i==11){   // 상대방 대화상자
+            nameboxJihoon.style.display="block"
+            nameboxYou.style.display="none"
+        }
+        else if(i==7 || i==10)   // 나 대화상자
+        {
+            nameboxYou.style.display="block"
+            nameboxJihoon.style.display="none"
+        }
+        else{
+            nameboxYou.style.display="none"
+            nameboxJihoon.style.display="none"
+
+        }
+
+
+        if(i==12){ //마지막에 next button 숨기기
         story1.style.display="block";
         nextbutton.style.display="none";
         nameboxJihoon.style.display="none"

@@ -15,13 +15,16 @@
                 <div id="namebox_you" class="namebox" style="display: block;"><p>김르탄 (21세)</p></div>
                 <div id="story1" class="choice"> <!--스토리 1번 선택지-->
                     <div class="choice_wrap">
-                        <div class="answer" onclick="location.href='D1(F).html'"><p>김스파 짝사랑 유지</p></div>
-                        <div class="answer" onclick="location.href='D2(F).html'"><p>김스파 짝사랑 끝 </p></div>
+                        <div class="answer" onclick="location.href='E1(F).html'"><p>짝사랑하는 김스파</p></div>
+                        <div class="answer" onclick="location.href='E2(F).html'"><p>남/여사친 김삥뽕 </p></div>
                     </div>
                 </div>
                 <div class="logbox">
-                    <p class="log">‘뿌엥 나한테 어떻게 그런말을... ㅠㅠ’</p><!--로그0-->
-                    <p class="log">‘뿌엥 나한테 어떻게 그런말을... ㅠㅠ’</p><!--로그1-->
+                    <p class="log">김스파 짝사랑 유지</p><!--로그0-->
+                    <p class="log">싸가지 없는 모습까지도 멋있다 .. 난 이렇게 짝사랑만 하다가 늙어 죽는 걸까</p><!--로그1-->
+                    <p class="log">나 자신이 너무 처량해서 소주를 뜯었다.</p><!--로그2-->
+                    <p class="log">먹나보니 2병이 넘어갔다. 만취한 상태로 전화를 걸었다.</p><!--로그3-->
+                    <p class="log">내가 전화를 건 사람은 누굴까 ?</p><!--로그4-->
                     <div id="nextbutton"><img src="../assets/next_button.svg" alt="button"></div>
                 </div>
             </div>
@@ -51,7 +54,7 @@
         logshow.style.display="block";
         
 
-        if(i==1){ //마지막에 next button 숨기기
+        if(i==4){ //마지막에 next button 숨기기
         story1.style.display="block";
         nextbutton.style.display="none";
         nameboxJihoon.style.display="none"

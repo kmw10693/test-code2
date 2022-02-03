@@ -15,24 +15,32 @@
                 <div id="namebox_you" class="namebox" style="display: block;"><p>김르탄 (21세)</p></div>
                 <div id="story1" class="choice"> <!--스토리 1번 선택지-->
                     <div class="choice_wrap">
-                        <div class="answer" onclick="location.href='J1.html'"><p>국비지원으로 개발자 교육을 받는다</p></div>
-                        <div class="answer" onclick="location.href='J2.html'"><p>부트캠프에 참가해 개발자 교육을 받는다.</p></div>
-                        <div class="answer" onclick="location.href='J3.html'"><p>우선 그냥 아무곳이나 지원해본다.</p></div>
-                        <div class="answer" onclick="location.href='J4.html'"><p>모든 것을 스파의 탓으로 돌리고 칩거한다.</p></div>
+                        <div class="answer" onclick="location.href='F3(FJ).html'"><p>우선 계획을 짠뒤 만날 시간을 정한다.</p></div>
+                        <div class="answer" onclick="location.href='F4(FP).html'"><p>음 한 2시쯤 만나면 될 것 같다. </p></div>
                     </div>
                 </div>
                 <div class="logbox">
-                    <p class="log">그냥 아무것도 안한다</p><!--로그0-->
-                    <p class="log">그래도 역시 방학동안 공부는 하고 싶지 않다</p><!--로그1-->
-                    <p class="log">“아니야 그냥 넷플릭스나 볼래..”</p><!--로그2-->
-                    <p class="log">2년뒤..</p><!--로그3-->
-                    <p class="log">넷플릭스에 중독된 르탄이는 넷플릭스만 보며 2년을 보내고 졸업을 하게 되었다. </p><!--로그4-->
-                    <p class="log">집에서 넷플릭스만 보다보니 자연스럽게 삥뽕이와도 멀어지게 되었다. </p><!--로그5-->
-                    <p class="log">학점 : 3.5/4.5, 대외활동 없음</p><!--로그6-->
-                    <p class="log">수상경력 없음, 동아리활동 없음 </p><!--로그7-->
-                    <p class="log">봉사시간 0, 포트폴리오 없음</p><!--로그8-->
-                    <p class="log">정신차려보니 포폴도 없고 스펙도 엉망이다.</p><!--로그9-->
-                    <p class="log">‘하.. 나 개발자가 되고싶었는데 ... 취업 할 수 있을까?’</p><!--로그10-->
+                    <p class="log">남/여사친 김삥뽕</p><!--로그0-->
+                    <p class="log">“삥뽕아 ㅠㅠㅠㅠㅠ”</p><!--로그1-->
+                    <p class="log">“뭐야 너 취했음 ? ㅋㅋㅋ”</p><!--로그2-->
+                    <p class="log">“안취했거든 ㅠㅠㅠ 뿌엥 ㅠㅠㅠ”</p><!--로그3-->
+                    <p class="log">“... 너 울어 ?”</p><!--로그4-->
+                    <p class="log">“ㅠㅠㅠㅠㅠ”</p><!--로그5-->
+                    <p class="log">“야 르탄 왜 울어 울지마”</p><!--로그6-->
+                    <p class="log">“나는 언제까지 짝사랑만 하는걸까 ㅠㅠㅠ”</p><!--로그7-->
+                    <p class="log">“에휴.. 또 김스파 얘기야?”</p><!--로그8-->
+                    <p class="log">“ㅠㅠ 아니... (&^%$^*”</p><!--로그9-->
+                    <p class="log">김삥뽕에게 징징거리다가 나도 모르는 사이에 잠이 들었다.</p><!--로그10-->
+                    <p class="log">다음날</p><!--로그11-->
+                    <p class="log">핸드폰을 봤더니 김삥뽕에게 카톡이 와있다.</p><!--로그12-->
+                    <p class="log">“야 속은 괜찮냐?”</p><!--로그13-->
+                    <p class="log">....!!! 어제의 일이 주마등 처럼 스쳐지나간다.</p><!--로그14-->
+                    <p class="log">쪽팔려서 죽어버리고만 싶다..</p><!--로그15-->
+                    <p class="log">“응... 어제일은 제발 잊어줘...”</p><!--로그16-->
+                    <p class="log">“ㅋㅋㅋㅋㅋ 알았어. 야 이야기할 사람 필요하면 편하게 연락해. 나 백수라서 요즘 완전 심심해”</p><!--로그17-->
+                    <p class="log">“야 그럼 .. 금요일에 만날래?”</p><!--로그18-->
+                    <p class="log">“금요일? 좋지! 몇시에 만날까?”</p><!--로그19-->
+                    <p class="log">“금요일? 좋지! 몇시에 만날까?”</p><!--로그20-->
                     <div id="nextbutton"><img src="../assets/next_button.svg" alt="button"></div>
                 </div>
             </div>
@@ -63,10 +71,14 @@
 
         
         
-        if(i==2)   // 나 대화상자
-        {
+        if(i==1 || i==3 || i==5 || i==7 || i==9 || i==16 || i==18){
             nameboxYou.style.display="block"
             nameboxJihoon.style.display="none"
+        }
+        else if(i==2 || i==4 || i==6 || i==8 || i==10 || i==17 || i==19)
+        {
+            nameboxJihoon.style.display="block"
+            nameboxYou.style.display="none"
         }
         else{
             nameboxYou.style.display="none"
@@ -75,7 +87,7 @@
         }
 
 
-        if(i==10){ //마지막에 next button 숨기기
+        if(i==20){ //마지막에 next button 숨기기
         story1.style.display="block";
         nextbutton.style.display="none";
         nameboxJihoon.style.display="none"

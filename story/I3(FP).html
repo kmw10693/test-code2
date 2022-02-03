@@ -10,18 +10,18 @@
             <div class="wrap">
                 <div id="jihoon_normal" class="jihoonpic" style="display: block;"><img src="../assets/jihoon_normal.PNG" ></div>
                 <div id="jihoon_smile1" class="jihoonpic" style="display: none;"><img src="../assets/jihoon_smile1.PNG" ></div>
-                <div id="namebox_kimjihoon" class="namebox"><p>김스파</p></div>
+                <div id="namebox_kimjihoon" class="namebox"><p>삥뽕</p></div>
                 <div id="namebox_none" class="namebox"><p>???</p></div>
                 <div id="namebox_you" class="namebox" style="display: block;"><p>김르탄 (21세)</p></div>
-                <div id="story1" class="choice"> <!--스토리 1번 선택지-->
-                    <div class="choice_wrap">
-                        <div class="answer" onclick="location.href='D1(F).html'"><p>김스파 짝사랑 유지</p></div>
-                        <div class="answer" onclick="location.href='D2(F).html'"><p>김스파 짝사랑 끝 </p></div>
-                    </div>
-                </div>
                 <div class="logbox">
-                    <p class="log">‘뿌엥 나한테 어떻게 그런말을... ㅠㅠ’</p><!--로그0-->
-                    <p class="log">‘뿌엥 나한테 어떻게 그런말을... ㅠㅠ’</p><!--로그1-->
+                    <p class="log">함께 스터디를 한다</p><!--로그0-->
+                    <p class="log">“나도 스터디 같이 해도 될까?”</p><!--로그1-->
+                    <p class="log">“그럼 민주랑 재성이도 좋아할꺼야”</p><!--로그2-->
+                    <p class="log">“삥뽕아 정말 고마워”</p><!--로그3-->
+                    <p class="log">10년뒤...</p><!--로그4-->
+                    <p class="log">‘모바일게임 스타트업 ‘팀아테네’ 전년대비 500% 성장... 연매출 100억원 달성. CEO 김르탄 인터뷰’</p><!--로그5-->
+                    <p class="log">김르탄은 스터디를 통해 만난 친구들과 함께 팀아테네를 창업하였고, 성공적인 CEO가 되었다.</p><!--로그6-->
+                    <p class="log">스파르타코딩클럽 ‘게임개발 종합반’  https://spartacodingclub.kr/online/game</p><!--로그8-->
                     <div id="nextbutton"><img src="../assets/next_button.svg" alt="button"></div>
                 </div>
             </div>
@@ -49,10 +49,26 @@
         var logshow = log[i];
         loghidden.style.display="none";
         logshow.style.display="block";
-        
 
-        if(i==1){ //마지막에 next button 숨기기
-        story1.style.display="block";
+        
+        
+        if(i==2){   // 상대방 대화상자
+            nameboxJihoon.style.display="block"
+            nameboxYou.style.display="none"
+        }
+        else if(i==1 || i==3)   // 나 대화상자
+        {
+            nameboxYou.style.display="block"
+            nameboxJihoon.style.display="none"
+        }
+        else{
+            nameboxYou.style.display="none"
+            nameboxJihoon.style.display="none"
+
+        }
+
+
+        if(i==7){ //마지막에 next button 숨기기
         nextbutton.style.display="none";
         nameboxJihoon.style.display="none"
         };
