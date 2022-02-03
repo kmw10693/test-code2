@@ -8,13 +8,22 @@
         <div class="container">
             <div class="blank"><p onclick="location.href='https://kmw10693.github.io/test-code2/'"><img src="../assets/logo.svg" alt="logo"></p></div>
             <div class="wrap">
-                <div id="jihoon_normal" class="jihoonpic" style="display: block;"><img src="../assets/jihoon_normal.PNG" ></div>
+                <div id="jihoon_normal" class="jihoonpic" style="display: block;"><img src="../assets/jun.png" ></div>
                 <div id="jihoon_smile1" class="jihoonpic" style="display: none;"><img src="../assets/jihoon_smile1.PNG" ></div>
-                <div id="namebox_kimjihoon" class="namebox"><p>김스파</p></div>
+                <div id="namebox_kimjihoon" class="namebox"><p>삥뽕</p></div>
                 <div id="namebox_none" class="namebox"><p>???</p></div>
                 <div id="namebox_you" class="namebox" style="display: block;"><p>김르탄 (21세)</p></div>
+                <div id="story1" class="choice"> <!--스토리 1번 선택지-->
+                    <div class="choice_wrap">
+                        <div class="answer" onclick="location.href='E12.html'"><p>준태님의 일하는 모습 구경하러 가기</p></div>
+                    </div>
+                </div>
                 <div class="logbox">
-                    <p class="log">스파르타코딩클럽<br>https://spartacodingclub.kr/</p><!--로그0-->
+                    <p class="log">이범규</p><!--로그0-->
+                    <p class="log">“안녕하세요. 데이터분석 종합반 튜터 김준태입니다.”</p><!--로그1-->
+                    <p class="log">코로나 알리미 & 마스크 알리미 개발<br>전) 광주인공지능사관학교 메인 강사<br>전) 인공지능 상담 플랫폼 개발<br>고려대학교 미디어학부/컴퓨터공학 졸</p><!--로그2-->
+                    <p class="log">생각보다 너무 멋있는 사람이 나타났다..</p><!--로그3-->
+                    <p class="log">나 어쩌면 다시 사랑에 빠진 것 같기도...</p><!--로그4-->
                     <div id="nextbutton"><img src="../assets/next_button.svg" alt="button"></div>
                 </div>
             </div>
@@ -33,8 +42,6 @@
         var story2 = document.getElementById("story2");
         jihoonNormal.style.display = "block";
         nameboxYou.style.display="none"
-        nextbutton.style.display="none";
-        nameboxJihoon.style.display="none"
 
         nextbutton.addEventListener("click", function(){
         i++; //버튼 클릭할 때마다 변수 증가, 변수=로그 번호로 변수 번호에 맞는 로그 보여줌
@@ -45,8 +52,19 @@
         loghidden.style.display="none";
         logshow.style.display="block";
         
-        
-        if(i==1){ //마지막에 next button 숨기기
+        if(i==1){   // 상대방 대화상자
+            nameboxJihoon.style.display="block"
+            nameboxYou.style.display="none"
+        }
+        else{
+            nameboxYou.style.display="none"
+            nameboxJihoon.style.display="none"
+            nameboxNone.style.display="none"
+
+        }
+
+        if(i==4){ //마지막에 next button 숨기기
+        story1.style.display="block";
         nextbutton.style.display="none";
         nameboxJihoon.style.display="none"
         };

@@ -15,24 +15,18 @@
                 <div id="namebox_you" class="namebox" style="display: block;"><p>김르탄 (21세)</p></div>
                 <div id="story1" class="choice"> <!--스토리 1번 선택지-->
                     <div class="choice_wrap">
-                        <div class="answer" onclick="location.href='H5.html'"><p>마음을 정리한다</p></div>
-                        <div class="answer" onclick="location.href='H6.html'"><p>아무래도 포기하지 못한다</p></div>
+                        <div class="answer" onclick="location.href='H11.html'"><p>왠지 삥뽕이가 다르게 보인다.</p></div>
+                        <div class="answer" onclick="location.href='H12.html'"><p>역시 삥뽕이는 편한 친구다.</p></div>
                     </div>
                 </div>
                 <div class="logbox">
                     <p class="log">댄디/러블리</p><!--로그0-->
-                    <p class="log">옆에 옷을 주섬주섬 입고 나갔다.</p><!--로그1-->
-                    <p class="log">“삥뽕아 안녕”</p><!--로그2-->
-                    <p class="log">“하이."</p><!--로그3-->
-                    <p class="log">삥뽕이와 카페에 갔다.</p><!--로그4-->
-                    <p class="log">“삥뽕아 ... 나 이러다가 모쏠로 죽는거 아닐까..?”</p><!--로그5-->
-                    <p class="log">“왜 또. 무슨일 있어?”</p><!--로그6-->
-                    <p class="log">“아니.. 내가 스파한테 만나자고 하려고 마음을 먹었거든? 그래서 막 5만번 고민해서 간신히 카톡을 보냈는데 ... (&*^$&(*)”</p><!--로그7-->
-                    <p class="log">~ 30분 후 ~</p><!--로그8-->
-                    <p class="log">“...*^%*) 막 그랬어..”</p><!--로그9-->
-                    <p class="log">“아휴 힘들었겠네... 근데 르탄아 아무래도 스파는 너한테 별 마음이 없는 거 같아. 그만 포기하는게 어때?”</p><!--로그10-->
-                    <p class="log">어쩌면 좋을까?</p><!--로그11-->
-
+                    <p class="log">카페에서 삥뽕이를 만났다.</p><!--로그1-->
+                    <p class="log">“르탄 속은 좀 괜찮아?”</p><!--로그2-->
+                    <p class="log">“응.. ㅋㅋㅋ ㅠㅠㅠ 진짜 그날 술 너무 많이 마셨어”</p><!--로그3-->
+                    <p class="log">“ㅋㅋㅋㅋ 그럴수있지. 야 나 어제 ...&%#^*(&^...”</p><!--로그4-->
+                    <p class="log">삥뽕이와 함께 재밌는 시간을 보냈다</p><!--로그5-->
+                    <p class="log">‘진짜 너무 편하고 재밌다.. 진짜 힐링되는 기분이야..’</p><!--로그6-->
                     <div id="nextbutton"><img src="../assets/next_button.svg" alt="button"></div>
                 </div>
             </div>
@@ -63,11 +57,11 @@
 
         
         
-        if(i==3 || i==6 || i==10){
+        if(i==2 || i==4){
             nameboxJihoon.style.display="block"
             nameboxYou.style.display="none"
         }
-        else if(i==2 || i==5 || i==7 || i==9)   
+        else if(i==3)   
         {
             nameboxYou.style.display="block"
             nameboxJihoon.style.display="none"
@@ -79,7 +73,7 @@
         }
 
 
-        if(i==11){ //마지막에 next button 숨기기
+        if(i==6){ //마지막에 next button 숨기기
         story1.style.display="block";
         nextbutton.style.display="none";
         nameboxJihoon.style.display="none"
